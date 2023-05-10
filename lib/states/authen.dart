@@ -37,17 +37,21 @@ class _AuthenState extends State<Authen> {
             userForm(),
             passForm(),
             loginButton(),
-            WidgetTextButton(
-              label: 'Create New Account',
-              pressFunc: () {
-                Get.to(const CreateNewAccount());
-              },
-              color: Colors.pink,
-            )
+            createNewAccountButton(),
           ],
         ),
       ),
     );
+  }
+
+  WidgetTextButton createNewAccountButton() {
+    return WidgetTextButton(
+            label: 'Create New Account',
+            pressFunc: () {
+              Get.to(const CreateNewAccount());
+            },
+            color: Colors.pink,
+          );
   }
 
   Row loginButton() {

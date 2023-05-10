@@ -49,8 +49,8 @@ class AppConstant {
         fontSize: size ?? 20, fontWeight: FontWeight.w700, color: color);
   }
 
-  TextStyle h3Style({double? size, Color? color}) {
+  TextStyle h3Style({double? size, Color? color, FontWeight? fontWeight}) {
     return TextStyle(
-        fontSize: size ?? 14, fontWeight: FontWeight.normal, color: color);
+        fontSize: size ?? 14, fontWeight: fontWeight ?? FontWeight.normal, color: color, );
   }
 }
