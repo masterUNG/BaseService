@@ -3,6 +3,9 @@
 
 ## ต้องการรายละเอียดเพิ่ม หรือ ต้องการ ปรึกษาการทำ โปรเจคแอนดรอยด์
 ### ติดต่อมาสเตอร์ อึ่ง เลย ที่
+[![screenshot-1684144281372.png](https://i.postimg.cc/g2FZSPwZ/screenshot-1684144281372.png)](https://postimg.cc/0bnjjF0k)
+
+[![screenshot-1684144336619.png](https://i.postimg.cc/K8PgCsLs/screenshot-1684144336619.png)](https://postimg.cc/SnKsMdgW)
 
 [![IMG_6065.jpg](https://s26.postimg.cc/kajrs6fbt/IMG_6065.jpg)](https://postimg.cc/image/7j5llo5jp/)
 
