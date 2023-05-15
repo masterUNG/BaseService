@@ -31,7 +31,8 @@ class WidgetForm extends StatelessWidget {
       margin: EdgeInsets.only(top: margin ?? 16),
       width: 250,
       height: maxlength == null ? 40 : 60,
-      child: TextFormField(maxLength: maxlength,
+      child: TextFormField(
+        maxLength: maxlength,
         keyboardType: textInputType,
         controller: textEditingController,
         obscureText: obsecu ?? false,
@@ -44,7 +45,9 @@ class WidgetForm extends StatelessWidget {
           filled: true,
           contentPadding:
               const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-          border: const OutlineInputBorder(),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
         ),
       ),
     );

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "341127987672",
+    "project_id": "baseservice-f82bf",
+    "storage_bucket": "baseservice-f82bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341127987672:android:8495088b99b3ae60e772ad",
+        "android_client_info": {
+          "package_name": "com.masterung.baseservice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341127987672-mc365uk43ftajlur3qi4cfl40bjntavj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB1J4xrMHu5BiaNiHMmcLQCFsZ-Swux4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "341127987672-mc365uk43ftajlur3qi4cfl40bjntavj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

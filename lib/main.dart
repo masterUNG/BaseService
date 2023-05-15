@@ -1,12 +1,30 @@
 import 'dart:io';
 
 import 'package:baseservice/states/authen.dart';
+import 'package:baseservice/states/test_success_otp.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-void main() {
+var getPages = <GetPage<dynamic>>[
+  GetPage(
+    name: '/authen',
+    page: () => const Authen(),
+  ),
+  GetPage(
+    name: '/testSuccesOtp',
+    page: () => const TestSuccessOtp(),
+  ),
+];
+
+Future<void> main() async {
   HttpOverrides.global = MyHttpOverride();
-  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp().then((value) {
+    runApp(MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +34,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Authen(),
+      // home: Authen(),
+      getPages: getPages,
+      initialRoute: '/authen',
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.indigo),

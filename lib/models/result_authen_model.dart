@@ -10,8 +10,8 @@ class ResultAuthenModel {
   final String FULLNAME;
   final String MSG_CODE;
   final String MSG_DESC;
-  final String MktId;
-  final String User_Level;
+  final int MktId;
+  final int User_Level;
   ResultAuthenModel({
     required this.token,
     required this.expiresIn,
@@ -51,8 +51,8 @@ class ResultAuthenModel {
       FULLNAME: (map['FULLNAME'] ?? '') as String,
       MSG_CODE: (map['MSG_CODE'] ?? '') as String,
       MSG_DESC: (map['MSG_DESC'] ?? '') as String,
-      MktId: (map['MktId'] ?? '') as String,
-      User_Level: (map['User_Level'] ?? '') as String,
+      MktId: (map['MktId'] ?? 0) as int,
+      User_Level: (map['User_Level'] ?? 0) as int,
     );
   }
 

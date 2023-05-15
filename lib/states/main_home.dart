@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:baseservice/states/chat.dart';
+import 'package:baseservice/states/otp_page.dart';
 import 'package:baseservice/utility/app_constant.dart';
 import 'package:baseservice/widgets/widget_sticky.dart';
 import 'package:baseservice/widgets/widget_transection.dart';
@@ -35,6 +37,7 @@ class _MainHomeState extends State<MainHome> {
   void initState() {
     super.initState();
     controller.endDateTimes.add(dateTime);
+    AppService().checkAuthenFirebase();
   }
 
   @override
@@ -46,7 +49,25 @@ class _MainHomeState extends State<MainHome> {
               'transectionModels ---> ${appController.transectionModels.length}');
           return Scaffold(
             backgroundColor: Colors.white,
-            appBar: AppBar(),
+            appBar: AppBar(
+              actions: [
+                WidgetIconButton(
+                  iconData: Icons.chat,
+                  pressFunc: () {
+                    Get.to(const Chat());
+                  },
+                ),
+                WidgetIconButton(
+                  iconData: Icons.security,
+                  pressFunc: () {
+                    Get.to(OtpPage(
+                      resultAuthenModel: widget.resultAuthenModel,
+                      initialPage: '/testSuccesOtp',
+                    ));
+                  },
+                )
+              ],
+            ),
             body: ListView(
               children: [
                 chooseDate(appController, context),
@@ -70,11 +91,12 @@ class _MainHomeState extends State<MainHome> {
                     //     ],
                     //   ),
                     : WidgetSticky(),
-                    Row(mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Icon(Icons.arrow_right),
-                      ],
-                    )
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Icon(Icons.arrow_right),
+                  ],
+                )
               ],
             ),
           );
@@ -86,7 +108,8 @@ class _MainHomeState extends State<MainHome> {
       children: [
         Expanded(
           flex: 1,
-          child: Row(mainAxisAlignment: MainAxisAlignment.center,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               WidgetText(
                 data: 'วันที่',
@@ -97,7 +120,8 @@ class _MainHomeState extends State<MainHome> {
         ),
         Expanded(
           flex: 1,
-          child: Row(mainAxisAlignment: MainAxisAlignment.center,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               WidgetText(
                 data: 'กองทุน',
@@ -108,7 +132,8 @@ class _MainHomeState extends State<MainHome> {
         ),
         Expanded(
           flex: 1,
-          child: Row(mainAxisAlignment: MainAxisAlignment.center,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               WidgetText(
                 data: 'บริษัทจัดการ',
@@ -119,7 +144,8 @@ class _MainHomeState extends State<MainHome> {
         ),
         Expanded(
           flex: 1,
-          child: Row(mainAxisAlignment: MainAxisAlignment.center,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               WidgetText(
                 data: 'รายการ',
